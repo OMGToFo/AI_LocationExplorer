@@ -40,7 +40,7 @@ tourLengthText = ""
 
 # Function to get latitude and longitude from a location name
 def get_lat_long(location_name):
-    geolocator = Nominatim(user_agent="geoapi")
+    geolocator = Nominatim(user_agent="ailocationxplorer")
     location = geolocator.geocode(location_name)
     if location:
         return location.latitude, location.longitude
@@ -186,7 +186,7 @@ if loc:
 
     actualLocation = (lat, long)
     # Initialize Nominatim API
-    geolocator = Nominatim(user_agent="actualLocationAdress")
+    geolocator = Nominatim(user_agent="actualLocationAdressTest")
 
     # Get the location (address)
     ActuallocationAdress = geolocator.reverse(actualLocation, exactly_one=True)
