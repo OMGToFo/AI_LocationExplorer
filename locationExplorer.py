@@ -176,7 +176,8 @@ def plot_route_with_arrows(locations):
 
 # Streamlit App Layout
 st.title("AI Location Explorer")
-st.info("Get some inspiration for the exploration of a location along selected POIs. Always check the suggested route and POIs in another app before starting the journey - the AI sometimwa it hallucinates! ")
+st.info("Get some inspiration for the exploration of a location along selected POIs.")
+st.warning("Always check the suggested route and POIs in another app before starting the journey - the AI sometimes hallucinates!")
 
 loc = get_geolocation()
 if loc:
