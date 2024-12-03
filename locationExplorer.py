@@ -21,7 +21,7 @@ openai.api_key = st.text_input("Enter ChatGPT Api Key", value="")
 
 if openai.api_key =="":
     st.info("Enter ChatGPTApi Key to start exploring and get some inspiration for a short trip."
-            " Remember - ChatGPT sometimes hallucinates!")
+            " Remember - ChatGPT sometimes hallucinates")
     st.stop()
 
 client = OpenAI(
@@ -40,7 +40,7 @@ tourLengthText = ""
 
 # Function to get latitude and longitude from a location name
 def get_lat_long(location_name):
-    geolocator = Nominatim(user_agent="ailocationxplorer")
+    geolocator = Nominatim(user_agent="geoapi")
     location = geolocator.geocode(location_name)
     if location:
         return location.latitude, location.longitude
@@ -176,8 +176,7 @@ def plot_route_with_arrows(locations):
 
 # Streamlit App Layout
 st.title("AI Location Explorer")
-st.info("Get some inspiration for the exploration of a location along selected POIs.")
-st.warning("Always check the suggested route and POIs in another app before starting the journey - the AI sometimes hallucinates!")
+st.info("Get some inspiration for the exploration of a location along selected POIs ")
 
 loc = get_geolocation()
 if loc:
@@ -187,7 +186,7 @@ if loc:
 
     actualLocation = (lat, long)
     # Initialize Nominatim API
-    geolocator = Nominatim(user_agent="actualLocationAdressTest")
+    geolocator = Nominatim(user_agent="actualLocationAdress")
 
     # Get the location (address)
     ActuallocationAdress = geolocator.reverse(actualLocation, exactly_one=True)
@@ -268,7 +267,7 @@ with st.form("my_form"):
 
 
     # Checkboxes for POIs
-    poi_options = ["Shopping", "Museums", "Bars", "Cafes", "Restaurants", "Photospots", "Viewpoint", "Churches", "Touristic Sites", "Libraries","Grocery Store", "Toilets", "Parking", "Chargingstation", "Tourist Information", "Hotel", "Interesting Architecture", "Beach"]
+    poi_options = ["Shopping", "Museums", "Bars", "Cafes", "Restaurants", "Photospots", "Viewpoint", "Churches", "Touristic Sites", "Grocery Store", "Toilets", "Parking", "Chargingstation", "Tourist Information", "Hotel", "Interesting Architecture", "Beach"]
     selected_pois = st.multiselect("Select points of interest (POIs):", poi_options)
 
     EndpointIsStart = st.checkbox("Round-Trip")
