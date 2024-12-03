@@ -268,7 +268,7 @@ with st.form("my_form"):
 
 
     # Checkboxes for POIs
-    poi_options = ["Shopping", "Museums", "Bars", "Cafes", "Restaurants", "Photospots", "Viewpoint", "Churches", "Touristic Sites", "Grocery Store", "Toilets", "Parking", "Chargingstation", "Tourist Information", "Hotel", "Interesting Architecture", "Beach"]
+    poi_options = ["Shopping", "Museums", "Bars", "Cafes", "Restaurants", "Photospots", "Viewpoint", "Churches", "Touristic Sites","Libraries","Grocery Store", "Toilets", "Parking", "Chargingstation", "Tourist Information", "Hotel", "Interesting Architecture", "Beach"]
     selected_pois = st.multiselect("Select points of interest (POIs):", poi_options)
 
     EndpointIsStart = st.checkbox("Round-Trip")
